@@ -10,17 +10,7 @@ def FirstList(A, B, N):
         result.append(sum(result[:i]))
     return result
 
-while True:
-    try:
-        A = int(input("Введите первое число: "))
-        B = int(input("Введите второе число: "))
-        N = int(input("Введите третье число: "))
-        if N > 2:
-            SecondList = FirstList(A, B, N)
-            print(SecondList)
-        else:
-            print('N должно быть больше 2')
-        break
+A = 3
+B = 4
 
-    except ValueError:
-        print("Вы ввели не число!")
+print(FirstList(A, B, 2))
