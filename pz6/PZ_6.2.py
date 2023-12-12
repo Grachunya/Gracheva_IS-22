@@ -9,8 +9,6 @@ def find_local_minimum(arr):
         if arr[i] < min_value:
             min_index = i
             min_value = arr[i]
-        elif arr[i] == min_value and arr[i - 1] > arr[i]:
-            return i
     return min_index
 
 try:
