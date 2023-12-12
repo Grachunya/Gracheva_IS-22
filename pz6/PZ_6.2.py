@@ -1,19 +1,18 @@
 
+
 # Дан список размера N. Найти максимальный из его локальных минимумов.
 # (локальный минимум — это элемент, который меньше любого из своих соседей).
 
 def find_local_minimum(arr):
-    min_index = 0
-    min_value = arr[0]
-    for i in range(1, len(arr)):
-        if arr[i] < min_value:
-            min_index = i
-            min_value = arr[i]
-    return min_index
+    minimums = []
+    for i in range(1, len(arr) - 1):
+        if arr[i] < arr[i - 1] and arr[i] < arr[i + 1]:
+            minimums.append(arr[i])
+    return minimums
 
 try:
-    arr = [16, 44, 10, 12, 87]
-    print(arr[find_local_minimum(arr)])
+    arr = [16, 44, 10, 12, 87, 14, 1, 23]
+    print(max(find_local_minimum(arr)))
 
 except ValueError:
     print("Вы ввели не число")
