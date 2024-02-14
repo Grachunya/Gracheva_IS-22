@@ -47,7 +47,7 @@ for i in range(len(m)):
 f1.close()
 
 f2 = open('data_2.txt', 'a')
-print('Произведение элементов: ', multiplier, file = f2)
+print('Произведение элементов: ', multiplier, file=f2)
 f2.close()
 
 
