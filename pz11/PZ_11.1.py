@@ -1,8 +1,10 @@
+# Создание последовательности из целых положительных и отрицательных чисел
 nums = ['12 44 8 -30 198 -9 8 44 -27']
 f1 = open('data_1.txt', 'w')
 f1.writelines(nums)
 f1.close()
 
+# Исходные данные:
 f2 = open('data_2.txt', 'w')
 f2.write('Исходные данные: ')
 f2.write('\n')
@@ -10,6 +12,7 @@ f2.writelines(nums)
 f2.close()
 
 
+# Количество элементов:
 f1 = open('data_1.txt')
 m = f1.read()
 m = m.split()
@@ -23,6 +26,7 @@ print('Количество элементов: ', len(m), file = f2)
 f2.close()
 
 
+# Произведение элементов
 f1 = open('data_1.txt')
 multiplier = 1
 m = f1.read()
@@ -37,6 +41,7 @@ print('Произведение элементов: ', multiplier, file = f2)
 f2.close()
 
 
+# Повторяющиеся элементы:
 f1 = open('data_1.txt', 'r')
 nums = list(map(int, f1.read().split()))
 duplicates = set()
@@ -53,6 +58,7 @@ print('Повторяющиеся элементы: ', ' '.join(map(str, duplica
 f2.close()
 
 
+# Количество повторяющихся элементов:
 f1 = open('data_1.txt', 'r')
 nums = list(map(int, f1.read().split()))
 f2 = open('data_2.txt', 'a')
@@ -63,7 +69,7 @@ for number in set(nums):
 f2.close()
 f1.close()
 
-
+# Элементы > 5 увеличены в два раза:
 f1 = open('data_1.txt', 'r')
 nums = list(map(int, f1.read().split()))
 proccesed_nums = [num * 2 if num > 5 else num for num in nums]
