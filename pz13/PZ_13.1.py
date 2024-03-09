@@ -1,15 +1,13 @@
 # В матрице элементы первого столбца возвести в куб
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+import random
 
-def cube(x):
-    return x**3
+matrix = [[random.randint(0, 5) for i in range(3)] for row in range(3)]
+print('Исходная матрица:')
+[print(i) for i in matrix]
 
-result = list(map(lambda row: [cube(row[0])] + row[1:], matrix))
+result = map(lambda row: [row[0] ** 3 ] + row[1:], matrix)
 
+print("\nМатрица с заменой элементов: ")
 for row in result:
     print(row)

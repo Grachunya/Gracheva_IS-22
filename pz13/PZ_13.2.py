@@ -1,10 +1,11 @@
 # Сгенерировать матрицу, в которой элементы больше 10 заменяются на 0.
+import random
 
-matrix = [
-    [2, 4, 6],
-    [8, 10, 12],
-    [14, 16, 18]
-]
+matrix = [[random.randint(0, 100) for i in range(3)] for row in range(3)]
+print('Исходная матрица:')
+[print(i) for i in matrix]
+
+
 
 def replace(element):
     return 0 if element > 10 else element
