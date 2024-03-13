@@ -20,7 +20,7 @@ for line in lines:
         else:
             group2.append(line)
 
-with open("file_1.txt", "w") as file1:
+with open("file_1.txt", 'w') as file1:
     file1.writelines(group1)
 
 with open("file_2.txt", "w") as file2:
